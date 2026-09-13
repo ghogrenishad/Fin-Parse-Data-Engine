@@ -3,8 +3,8 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 let supabaseClient: SupabaseClient | null = null;
 
 export function getSupabaseConfig(): { url: string; anonKey: string; isConfigured: boolean } {
-  const envUrl = (import.meta as any).env?.VITE_SUPABASE_URL || '';
-  const envKey = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY || '';
+  const envUrl = (import.meta as any).env?.SUPABASE_URL || '';
+  const envKey = (import.meta as any).env?.SUPABASE_ANON_KEY || '';
 
   const localUrl = localStorage.getItem('custom_supabase_url') || envUrl;
   const localKey = localStorage.getItem('custom_supabase_anon_key') || envKey;
