@@ -1,0 +1,7 @@
+{
+  "name": "Receipt & Invoice Parser",
+  "description": "A financial data parsing platform that extracts invoice ID, amount, vendor, category, and date from raw unstructured text into an editable spreadsheet with persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

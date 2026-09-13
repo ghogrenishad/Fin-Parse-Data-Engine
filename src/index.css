@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #E4E3E0;
+    color: #141414;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Crisp high-density custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E4E3E0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
