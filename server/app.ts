@@ -132,8 +132,8 @@ function saveInvoices(data: any[]) {
 let supabaseServerClient: SupabaseClient | null = null;
 
 function getServerSupabaseClient(): SupabaseClient | null {
-  const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
-  const supabaseKey = process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+  const supabaseUrl = process.env.SUPABASE_URL || process.env.SUPABASE_URL;
+  const supabaseKey = process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
 
   if (supabaseUrl && supabaseKey && supabaseUrl.startsWith("http")) {
     if (!supabaseServerClient) {
@@ -446,8 +446,8 @@ app.post("/api/auth/logout", (req, res) => {
 // 1. Health check & Server Secrets Status
 app.get("/api/health", (req, res) => {
   const hasGeminiKey = Boolean(process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.trim().length > 0);
-  const hasSupabaseUrl = Boolean(process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL);
-  const hasSupabaseKey = Boolean(process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY);
+  const hasSupabaseUrl = Boolean(process.env.SUPABASE_URL || process.env.SUPABASE_URL);
+  const hasSupabaseKey = Boolean(process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY);
   const hasSupabase = hasSupabaseUrl && hasSupabaseKey;
 
   res.json({
